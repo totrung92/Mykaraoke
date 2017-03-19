@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_centerVertical="true"
+    android:gravity="center"
+    android:background="@drawable/background">
+
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:layout_margin="10dp"
+        android:background="@drawable/selector_button_main"
+        android:textSize="30dp"
+        android:text="@string/view_mode"
+        android:id="@+id/bt_Viewing"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:textColor="#fff"
+        android:layout_margin="10dp"
+        android:textSize="30dp"
+        android:text="@string/select_mode"
+        android:background="@drawable/selector_button_main"
+        android:id="@+id/bt_Selecting"
+        android:layout_gravity="center_horizontal" />
+    <Button
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        android:textColor="#fff"
+        android:textSize="30dp"
+        android:text="@string/quit"
+        android:background="@drawable/selector_button_main"
+        android:id="@+id/bt_quit"
+        android:layout_gravity="center_horizontal" />
+</LinearLayout>

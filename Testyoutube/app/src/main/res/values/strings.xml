@@ -1,0 +1,63 @@
+<resources>
+    <string name="app_name">My Karaoke </string>
+    <string name="action_settings">Settings</string>
+    <string name="search">Search</string>string>
+    <string name="failed">Failed</string>string>
+    <string name="scanning">scanning for devices...</string>
+    <string name="select_device">select a device to connect</string>
+    <string name="none_paired">No devices have been paired</string>
+    <string name="none_found">No devices found</string>
+    <string name="title_paired_devices">Paired Devices</string>
+    <string name="title_other_devices">Other Available Devices</string>
+    <string name="button_scan">Scan for devices</string>
+
+
+    <string name="apptitle">The watch videos on Youtube</string>
+    <string name="view_mode">Watch mode</string>
+    <string name="select_mode">Select mode</string>
+    <string name="quit">Quit</string>
+    <string name="bt_search">Search</string>
+    <string name="listplay">List to play:</string>
+    <string name="infoplay">PLAYING:</string>
+    <string name="bt_del_item">Del</string>
+    <string name="bt_prio_item">Up</string>
+
+    <string name="dl_quittitle">Quit Program</string>
+    <string name="dl_quittomaintitle">Quit to main menu</string>
+    <string name="dl_quitquestion">Are you sure?</string>
+    <string name="dl_quityes">Yes</string>
+    <string name="dl_quitno">No</string>
+
+
+    <string name="toast_inputkey">Please input key to search</string>
+    <string name="toast_listempty">List to play is empty</string>
+    <string name="toast_videoerror">This video is error</string>
+    <string name="toast_bton">Bluetooth is on</string>
+    <string name="toast_btconnect">Bluetooth is connected</string>
+    <string name="toast_btconnecting">Bluetooth is connecting</string>
+    <string name="toast_initYTsuccess">init youtube success</string>
+    <string name="toast_initYTfail">init youtube false</string>
+    <string name="toast_dontconnect">Bluetooth not be connected</string>
+    <string name="toast_dontpermit">Bluetooth not allowed</string>
+    <string name="toast_connect">Connect to </string>
+    <string name="toast_checkconnect">Please check internet connect</string>
+    <string name="toast_check_connect_when_search">Make sure your device has connected to internet</string>
+    <string name="bt_choose">Choose</string>
+    <string name="bt_edit">Edit</string>
+    <string name="bt_save">Save</string>
+    <string name="bt_search_online">Search online</string>
+    <string name="bt_seach_offline">Search offline</string>
+    <string name="bt_chosen">Selected list</string>
+    <string name="tv_list_songs">List Songs:</string>
+    <string name="save_success">Save success</string>
+    <string name="save_false">Save false: this song already saved before</string>
+    <string name="dialog_input_infor">Please input information</string>
+    <string name="dialog_title_save">Save song</string>
+    <string name="dialog_bt_save">Save</string>
+    <string name="dialog_bt_cancel">Cancel</string>
+    <string name="dialog_bt_del">Delete</string>
+    <string name="dialog_title_edit">Edit infomation </string>
+    <string name="rb_online">Online</string>
+    <string name="rb_offline">Offline</string>
+
+</resources>

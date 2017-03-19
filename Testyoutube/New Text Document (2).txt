@@ -1,0 +1,2 @@
+adb -d shell
+run-as com.your.packagename cat databases/database.db > /sdcard/database.db

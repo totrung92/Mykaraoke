@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="2">
+        <com.google.android.youtube.player.YouTubePlayerView
+            android:id="@+id/yt_viewing_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:text="@string/infoplay"
+                android:textColor="#000"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:paddingRight="10dp"/>
+            <TextView
+                android:id="@+id/tv_infor"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="none"
+                android:ellipsize="marquee"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:scrollHorizontally="true"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:textColor="#457dd7"
+                android:textSize="18dp"
+                android:freezesText="true"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                android:layout_gravity="right">
+
+                <Button
+                    android:id="@+id/bt_viewing_stop"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buton_stop"
+                    android:onClick="viewingButtonOnClick"/>
+                <Button
+                    android:id="@+id/bt_viewing_next"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/buton_next"
+                    android:onClick="viewingButtonOnClick" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_viewing_wait_player"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#514f4f"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|center_horizontal"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp"
+                >
+
+                <Button
+                    android:id="@+id/bt_viewing_turn_BT"
+                    android:background="@drawable/buton_bluetooth_off"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="10dp"
+                    android:onClick="viewingButtonOnClick"/>
+
+                <Button
+                    android:id="@+id/bt_viewing_connect_BT"
+                    android:background="@drawable/buton_bluetooth_connect"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="top|right"
+                    android:layout_marginRight="10dp" />
+
+            </LinearLayout>
+            <Button
+                android:id="@+id/bt_viewing_quit"
+                android:layout_gravity="right"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/buton_close"
+                android:onClick="viewingButtonOnClick"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal">
+
+            <AutoCompleteTextView
+                android:id="@+id/autoCompleteTextView1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/search">
+                <requestFocus />
+            </AutoCompleteTextView>
+
+            <Button
+                android:layout_gravity="center"
+                android:id="@+id/bt_viewing_delete_text"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/buton_cancel"
+                android:onClick="viewingButtonOnClick"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rg_viewing_type_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:layout_weight="1"
+                android:id="@+id/rb_viewing_search_online"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:text="@string/rb_online"
+                android:textSize="15sp" />
+
+            <RadioButton
+                android:layout_weight="1"
+                android:id="@+id/rb_viewing_search_offline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/rb_offline"
+                android:textSize="15sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:layout_gravity="center"
+            android:background="@drawable/selector_button_search_video"
+            android:id="@+id/bt_viewing_search"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginBottom="4dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="20sp"
+            android:text="@string/bt_search"
+            android:onClick="viewingButtonOnClick"/>
+
+        <ListView
+            android:background="@drawable/selector_background_videos_search"
+            android:id="@+id/lv_viewing_search_players"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:dividerHeight="5dp" />
+    </LinearLayout>
+</LinearLayout>
