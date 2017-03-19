@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">My Karaoke</string>
+    <string name="action_settings">Cài đặt</string>
+    <string name="search">Tìm kiếm</string>string>
+    <string name="failed">Lỗi</string>string>
+    <string name="scanning">Tìm kiếm thiết bị...</string>
+    <string name="select_device">chọn một thiết bị để kết nối</string>
+    <string name="none_paired">Chưa có thiết bị nào được ghép đôi</string>
+    <string name="none_found">Không tìm thấy thiết bị nào</string>
+    <string name="title_paired_devices">Các thiết bị đã ghép đôi</string>
+    <string name="title_other_devices">Các thiết bị tìm thấy</string>
+    <string name="button_scan">Tìm kiếm thiết bị</string>
+
+
+    <string name="apptitle">Chương trình xem video trên Youtube</string>
+    <string name="view_mode">Chế Độ Xem</string>
+    <string name="select_mode">Chế Độ Chọn</string>
+    <string name="quit">Thoát</string>
+    <string name="bt_search">Tìm kiếm</string>
+    <string name="listplay">Danh Sách Phát:</string>
+    <string name="infoplay">ĐANG PHÁT:</string>
+    <string name="bt_del_item">Xóa</string>
+    <string name="bt_prio_item">Ưu tiên</string>
+
+    <string name="dl_quittitle">Thoát chương trình</string>
+    <string name="dl_quittomaintitle">Thoát về chương trình chính</string>
+    <string name="dl_quitquestion">Chắc chắn?</string>
+    <string name="dl_quityes">Đúng</string>
+    <string name="dl_quitno">Sai</string>
+
+
+    <string name="toast_inputkey">Hãy nhập từ khóa bài hát để tìm kiếm</string>
+    <string name="toast_listempty">Không có bài hát nào trong danh sách phát</string>
+    <string name="toast_videoerror">Video này bị lỗi</string>
+    <string name="toast_bton">Bluetooth đã bật</string>
+    <string name="toast_btconnect">Bluetooth đã kết nối</string>
+    <string name="toast_btconnecting">Bluetooth đang kết nối</string>
+    <string name="toast_initYTsuccess">Khởi tạo Youtube thành công</string>
+    <string name="toast_initYTfail">Khởi tạo Youtube thất bại</string>
+    <string name="toast_dontconnect">Bluetooth chưa được kết nối</string>
+    <string name="toast_dontpermit">Bluetooth không được phép</string>
+    <string name="toast_connect">Kết nối tới </string>
+    <string name="toast_checkconnect">Kiểm tra lại kết nối Mạng trước khi vào chương trình</string>
+    <string name="toast_check_connect_when_search">Chắc chắn rằng thiết bị của bạn đã kết nối mạng</string>
+
+    <string name="bt_choose">Chọn</string>
+    <string name="bt_edit">Sửa</string>
+    <string name="bt_save">Lưu</string>
+    <string name="bt_search_online">Tìm trực tuyến</string>
+    <string name="bt_seach_offline">Tìm ngoại tuyến</string>
+    <string name="bt_chosen">Đã chọn</string>
+    <string name="tv_list_songs">Danh sách:</string>
+
+    <string name="save_success">Lưu thành công</string>
+    <string name="save_false">Lưu lỗi: bài hát này đã được lưu trước đó</string>
+    <string name="dialog_input_infor">Hãy nhập thông tin bài hát</string>
+    <string name="dialog_title_save">Lưu bài hát</string>
+    <string name="dialog_bt_save">Lưu</string>
+    <string name="dialog_bt_cancel">Thoát</string>
+    <string name="dialog_bt_del">Xóa</string>
+    <string name="dialog_title_edit">Sửa thông tin bài hát</string>
+    <string name="rb_online">Trực tuyến</string>
+    <string name="rb_offline">Ngoại tuyến </string>
+
+
+</resources>
