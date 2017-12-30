@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">My Karaoke</string>
+    <string name="app_name">My Karaoke 2</string>
     <string name="action_settings">Cài đặt</string>
     <string name="search">Tìm kiếm</string>string>
     <string name="failed">Lỗi</string>string>
@@ -16,19 +16,20 @@
     <string name="apptitle">Chương trình xem video trên Youtube</string>
     <string name="view_mode">Chế Độ Xem</string>
     <string name="select_mode">Chế Độ Chọn</string>
+    <string name="tut_mode">Cách Sử Dụng</string>
     <string name="quit">Thoát</string>
     <string name="bt_search">Tìm kiếm</string>
     <string name="listplay">Danh Sách Phát:</string>
     <string name="infoplay">ĐANG PHÁT:</string>
     <string name="bt_del_item">Xóa</string>
     <string name="bt_prio_item">Ưu tiên</string>
+    <string name="bt_Connect">Kết nối</string>
 
     <string name="dl_quittitle">Thoát chương trình</string>
     <string name="dl_quittomaintitle">Thoát về chương trình chính</string>
     <string name="dl_quitquestion">Chắc chắn?</string>
     <string name="dl_quityes">Đúng</string>
     <string name="dl_quitno">Sai</string>
-
 
     <string name="toast_inputkey">Hãy nhập từ khóa bài hát để tìm kiếm</string>
     <string name="toast_listempty">Không có bài hát nào trong danh sách phát</string>
@@ -43,6 +44,9 @@
     <string name="toast_connect">Kết nối tới </string>
     <string name="toast_checkconnect">Kiểm tra lại kết nối Mạng trước khi vào chương trình</string>
     <string name="toast_check_connect_when_search">Chắc chắn rằng thiết bị của bạn đã kết nối mạng</string>
+    <string name="toast_checkfirebaseready">Server chưa sẵn sàng, hãy thử lại.</string>
+    <string name="toast_getIDfalse">Xin đợi chút, ID đang được khởi tạo.</string>
+    <string name="toast_requestconnect">Hãy nhấn đồng ý từ thiết bị muốn kết nối tới.</string>
 
     <string name="bt_choose">Chọn</string>
     <string name="bt_edit">Sửa</string>
@@ -56,12 +60,28 @@
     <string name="save_false">Lưu lỗi: bài hát này đã được lưu trước đó</string>
     <string name="dialog_input_infor">Hãy nhập thông tin bài hát</string>
     <string name="dialog_title_save">Lưu bài hát</string>
+    <string name="dialog_title_connect">Kết nối tới thiết bị khác</string>
+    <string name="dialog_title_accept_connect">Đồng ý kết nối tới</string>
+    <string name="dialog_message_connect">Hãy nhập ID của thiết bị cần kết nối </string>
+    <string name="dialog_message_accept_connect">Kết nối tới: </string>
     <string name="dialog_bt_save">Lưu</string>
+    <string name="dialog_bt_connect">Kết nối</string>
     <string name="dialog_bt_cancel">Thoát</string>
     <string name="dialog_bt_del">Xóa</string>
     <string name="dialog_title_edit">Sửa thông tin bài hát</string>
+    <string name="dialog_title">Tiêu đề: </string>
+    <string name="dialog_name">Tên BH: </string>
+    <string name="dialog_singer">Ca sỹ: </string>
     <string name="rb_online">Trực tuyến</string>
     <string name="rb_offline">Ngoại tuyến </string>
-
+    <string name="banner_ad_app_id">ca-app-pub-3319123169254187~5230540952</string>
+    <string name="banner_ad_unit_tut_id">ca-app-pub-3319123169254187/4906993355</string>
+    <string name="banner_ad_unit_selecting_id">ca-app-pub-3319123169254187/3290659352</string>
+    <string name="banner_ad_unit_main_id">ca-app-pub-3319123169254187/4767392551</string>
+    <string name="tut1">Hướng dẫn kết nối 2 thiết bị dưới 2 chế độ xem và chế độ chọn.</string>
+    <string name="tut2">Lấy số ID từ thiết bị chạy chế độ xem.</string>
+    <string name="tut3">Trong thiết bị chạy "chế độ chọn" ta nhấn "Kết nối"</string>
+    <string name="tut4">Sau đó nhập số ID của thiết bị chạy "chế độ xem" và nhấn kết nối.</string>
+    <string name="tut5">Chờ thiết bị chạy "chế độ xem" hiện thông báo kết nối, ta chọn kết nối</string>
 
 </resources>

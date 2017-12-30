@@ -53,13 +53,6 @@
                 android:layout_gravity="right">
 
                 <Button
-                    android:id="@+id/bt_viewing_stop"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/buton_stop"
-                    android:onClick="viewingButtonOnClick"/>
-                <Button
                     android:id="@+id/bt_viewing_next"
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -84,35 +77,19 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="right"
             android:orientation="horizontal"
             android:paddingTop="8dp">
-            <LinearLayout
+            <Button
+                android:id="@+id/bt_id"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_button_search_video"
                 android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|center_horizontal"
-                android:orientation="horizontal"
-                android:paddingLeft="10dp"
-                >
-
-                <Button
-                    android:id="@+id/bt_viewing_turn_BT"
-                    android:background="@drawable/buton_bluetooth_off"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="top|right"
-                    android:layout_marginRight="10dp"
-                    android:onClick="viewingButtonOnClick"/>
-
-                <Button
-                    android:id="@+id/bt_viewing_connect_BT"
-                    android:background="@drawable/buton_bluetooth_connect"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="top|right"
-                    android:layout_marginRight="10dp" />
-
-            </LinearLayout>
+                android:text="ID:000000"
+                android:textColor="#000"
+                android:textSize="20sp"
+                />
             <Button
                 android:id="@+id/bt_viewing_quit"
                 android:layout_gravity="right"

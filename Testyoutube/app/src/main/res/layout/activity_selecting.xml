@@ -1,10 +1,11 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0b0b0b"
     android:orientation="vertical"
-    tools:context="com.totato.karaoke.trung.SelectingActivity">
+    tools:context="com.totato.karaoke.me.SelectingActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,37 +29,14 @@
                 android:paddingLeft="5dp">
 
                 <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:paddingRight="10dp"
-                    android:text="@string/infoplay"
-                    android:textColor="#000"
-                    android:textSize="18dp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:id="@+id/tv_infor"
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:ellipsize="marquee"
-                    android:focusable="true"
-                    android:focusableInTouchMode="true"
-                    android:freezesText="true"
-                    android:marqueeRepeatLimit="marquee_forever"
-                    android:scrollHorizontally="true"
-                    android:selectAllOnFocus="true"
-                    android:text="none"
-                    android:textColor="#457dd7"
-                    android:textSize="18dp" />
-
-                <Button
-                    android:id="@+id/bt_selecting_stop"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_marginRight="10dp"
-                    android:background="@drawable/buton_stop"
-                    android:onClick="selectingButtonOnClick" />
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:text="@string/tv_list_songs"
+                    android:textColor="#000113"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/bt_selecting_next"
@@ -69,14 +47,6 @@
                     android:onClick="selectingButtonOnClick" />
             </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="2dp"
-                android:text="@string/tv_list_songs"
-                android:textColor="#fff"
-                android:textSize="25sp"
-                android:textStyle="bold" />
 
             <ListView
                 android:id="@+id/lv_searchfound"
@@ -97,24 +67,24 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/selector_button_page"
-                    android:onClick="selectingButtonOnClick"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:onClick="selectingButtonOnClick">
 
                     <Button
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:background="@drawable/selected"
-                        android:clickable="false"
-                        />
+                        android:clickable="false" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/bt_selecting_search_video_offline"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/selector_button_page"
-                    android:onClick="selectingButtonOnClick"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:onClick="selectingButtonOnClick">
 
                     <Button
                         android:layout_width="50dp"
@@ -122,14 +92,15 @@
                         android:background="@drawable/search_offline"
                         android:clickable="false" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:id="@+id/bt_selecting_search_video_online"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:background="@drawable/selector_button_page"
-                    android:onClick="selectingButtonOnClick"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:onClick="selectingButtonOnClick">
 
                     <Button
                         android:layout_width="50dp"
@@ -138,6 +109,16 @@
                         android:clickable="false" />
                 </LinearLayout>
             </LinearLayout>
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                ads:adSize="BANNER"
+                ads:adUnitId="@string/banner_ad_unit_selecting_id"></com.google.android.gms.ads.AdView>
+
         </LinearLayout>
 
         <LinearLayout
@@ -150,93 +131,57 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/selector_background_tabbar"
-                android:orientation="horizontal"
+                android:orientation="vertical"
                 android:padding="5dp">
 
                 <LinearLayout
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center|center_horizontal"
-                    android:layout_weight="1"
                     android:orientation="horizontal">
 
                     <Button
-                        android:id="@+id/bt_selecting_turn_BT"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="top|right"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/buton_bluetooth_off"
-                        android:onClick="selectingButtonOnClick" />
+                        android:id="@+id/bt_connect"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_button_search_video"
+                        android:text="@string/bt_Connect" />
 
                     <Button
-                        android:id="@+id/bt_selecting_connect_BT"
+                        android:id="@+id/bt_selecting_quit"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
-                        android:layout_gravity="top|right"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/buton_bluetooth_disconnect"
-                        android:onClick="selectingButtonOnClick" />
-
-                    <Button
-                        android:id="@+id/bt_selecting_save"
-                        android:layout_width="40dp"
-                        android:layout_height="40dp"
-                        android:layout_gravity="top|right"
-                        android:layout_marginRight="10dp"
-                        android:background="@drawable/buton_save"
+                        android:layout_gravity="right"
+                        android:layout_marginRight="3dp"
+                        android:background="@drawable/buton_close"
                         android:onClick="selectingButtonOnClick" />
                 </LinearLayout>
 
-                <Button
-                    android:id="@+id/bt_selecting_quit"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_gravity="right"
-                    android:layout_marginRight="3dp"
-                    android:background="@drawable/buton_close"
-                    android:onClick="selectingButtonOnClick" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/selector_background_tabbar"
-                android:gravity="right">
-
                 <AutoCompleteTextView
                     android:id="@+id/autoCompleteTextView1"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:ems="10"
-                    android:hint="@string/search">
-                    <requestFocus />
-                </AutoCompleteTextView>
-
+                    android:hint="@string/search"></AutoCompleteTextView>
 
                 <Button
-                    android:id="@+id/bt_selecting_delete_text"
-                    android:layout_width="30dp"
+                    android:id="@+id/bt_selecting_search"
+                    android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:layout_gravity="center"
-                    android:background="@drawable/buton_cancel"
-                    android:onClick="selectingButtonOnClick" />
+                    android:layout_marginBottom="4dp"
+                    android:background="@drawable/selector_button_search_video"
+                    android:onClick="selectingButtonOnClick"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:text="@string/bt_search"
+                    android:textColor="#000"
+                    android:textSize="20sp" />
+
             </LinearLayout>
 
-            <Button
-                android:id="@+id/bt_selecting_search"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_gravity="center"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/selector_button_search_video"
-                android:onClick="selectingButtonOnClick"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="@string/bt_search"
-                android:textColor="#000"
-                android:textSize="20sp" />
+
         </LinearLayout>
     </LinearLayout>
 
