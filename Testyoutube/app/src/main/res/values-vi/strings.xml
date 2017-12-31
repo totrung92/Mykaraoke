@@ -83,5 +83,7 @@
     <string name="tut3">Trong thiết bị chạy "chế độ chọn" ta nhấn "Kết nối"</string>
     <string name="tut4">Sau đó nhập số ID của thiết bị chạy "chế độ xem" và nhấn kết nối.</string>
     <string name="tut5">Chờ thiết bị chạy "chế độ xem" hiện thông báo kết nối, ta chọn kết nối</string>
+    <string name="tut6">Trang dưới đây hiện thị danh sách bài hát đã được chọn.</string>
+    <string name="tut7">Trang dưới đây dùng để tìm kiếm bài hát.</string>
 
 </resources>

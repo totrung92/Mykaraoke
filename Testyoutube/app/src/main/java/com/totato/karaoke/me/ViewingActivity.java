@@ -284,9 +284,8 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     public void AddVideo(VideoItem video) {
         if (!firebaseID.equalsIgnoreCase("null")) {
             fv.addVideo(video);
-        } else {
-            OnAddVideoFromServer(video);
         }
+        OnAddVideoFromServer(video);
     }
 
     public void MoveVideoToFirst(int position) {
@@ -327,9 +326,8 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     public void DeleteVideo(int position) {
         if (!firebaseID.equalsIgnoreCase("null")) {
             fv.removeVideo(VideoWaitsList.get(position));
-        } else {
-            OnRemoveVideoFromServer(VideoWaitsList.get(position));
         }
+        OnRemoveVideoFromServer(VideoWaitsList.get(position));
     }
 
     public void NextVideo() {
@@ -463,10 +461,8 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     public void priofromAdapter(int position) {
         if (!firebaseID.equalsIgnoreCase("null")) {
             fv.PrioVideo(VideoWaitsList.get(position).getLinkvideo());
-        } else {
-            MoveVideoToFirst(position);
         }
-
+            MoveVideoToFirst(position);
     }
 
     @Override

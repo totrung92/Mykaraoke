@@ -82,4 +82,6 @@
     <string name="tut3">In device run Select mode, we click Connect button.</string>
     <string name="tut4">Enter value of ID then click Connect.</string>
     <string name="tut5">In device run Watch mode,waiting until accept popup appear, click Connect button</string>
+    <string name="tut6">This page show list of selected video.</string>
+    <string name="tut7">This page is used to search video.</string>
 </resources>
