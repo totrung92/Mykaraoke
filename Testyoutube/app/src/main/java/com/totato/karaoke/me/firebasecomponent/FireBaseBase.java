@@ -38,6 +38,7 @@ public class FireBaseBase {
     public FireBaseBase(Context context,String ID) {
         ServerID=ID;
         this.m_Context = context;
+
         database       = FirebaseDatabase.getInstance();
     }
     public void FireBaseInit(){
@@ -89,7 +90,7 @@ public class FireBaseBase {
         public void onDataChange(DataSnapshot dataSnapshot) {
             if(dataSnapshot.getValue().toString().equals("Yes"));
             clearCommandNext();
-            listen.ReceiverCommandNextFromServer();
+            listen.OnNextFromServer();
         }
 
         @Override
@@ -107,7 +108,7 @@ public class FireBaseBase {
                 String videoID = dataSnapshot.getValue().toString();
                 if (!videoID.equals("No"))
                     clearCommandPrio();
-                listen.ReceiverCommandPrioFromServer(videoID);
+                listen.OnPrioFromServer(videoID);
             }
         }
 

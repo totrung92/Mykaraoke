@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="com.google.android.gms:play-services-instantapps-license-11.8.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.android/build-cache/639c450027cd2a14f981343e28116d09319b5c8c/output/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.android/build-cache/639c450027cd2a14f981343e28116d09319b5c8c/output/res" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

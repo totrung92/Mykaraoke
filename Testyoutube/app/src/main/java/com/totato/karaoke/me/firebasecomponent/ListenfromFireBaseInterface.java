@@ -7,9 +7,9 @@ import com.totato.karaoke.me.adapterlistviewcomponent.VideoItem;
  */
 
 public interface ListenfromFireBaseInterface {
-    public void ReceiverCommandNextFromServer();
+    public void OnNextFromServer();
     public void OnAddVideoFromServer(VideoItem video);
     public void OnRemoveVideoFromServer(VideoItem video);
-    public void ReceiverCommandPrioFromServer(String videoID);
+    public void OnPrioFromServer(String videoID);
     public void OnClientRequestFromServer(String clientName);
 }

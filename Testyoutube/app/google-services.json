@@ -1,27 +1,27 @@
 {
   "project_info": {
-    "project_number": "794365474443",
-    "firebase_url": "https://youtubeproject-a693e.firebaseio.com",
-    "project_id": "youtubeproject-a693e",
-    "storage_bucket": "youtubeproject-a693e.appspot.com"
+    "project_number": "116475543920",
+    "firebase_url": "https://test-145101.firebaseio.com",
+    "project_id": "testyoutube-145101",
+    "storage_bucket": "testyoutube-145101.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:794365474443:android:5f1e1968e1ad57c8",
+        "mobilesdk_app_id": "1:116475543920:android:5f1e1968e1ad57c8",
         "android_client_info": {
           "package_name": "com.totato.karaoke.me"
         }
       },
       "oauth_client": [
         {
-          "client_id": "794365474443-9fdph9cpuqsk4eha1dotcd79t8gethsk.apps.googleusercontent.com",
+          "client_id": "116475543920-31kno0b573qc5mhb0a6rk5mmvbg3mood.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyD5kyWOQqmBQdONIPkLTOp3LDo73Yn9YnQ"
+          "current_key": "AIzaSyDsn8S-Dys7e9gpKCZHBhq_egfFeDwhIww"
         }
       ],
       "services": {

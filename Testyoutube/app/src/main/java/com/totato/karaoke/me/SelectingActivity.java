@@ -284,7 +284,7 @@ public class SelectingActivity extends Activity implements ListenfromAdapterSele
 
 
     @Override
-    public void ReceiverCommandNextFromServer() {
+    public void OnNextFromServer() {
 
     }
 
@@ -306,7 +306,7 @@ public class SelectingActivity extends Activity implements ListenfromAdapterSele
     }
 
     @Override
-    public void ReceiverCommandPrioFromServer(String videoID) {
+    public void OnPrioFromServer(String videoID) {
         for (int i = 0; i < VideoWaitsList.size(); i++) {
             if (VideoWaitsList.get(i).getLinkvideo().compareTo(videoID) == 0) {
                 MoveVideoToFirst(i);

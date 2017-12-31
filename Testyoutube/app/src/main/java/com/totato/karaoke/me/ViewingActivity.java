@@ -77,12 +77,12 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     private DBSource db;
     private FirebaseViewing fv;
-    public String firebaseID = null;
+    public String firebaseID = "null";
     ValueEventListener valuevent = new ValueEventListener() {
         @Override
         public void onDataChange(DataSnapshot dataSnapshot) {
             firebaseID = dataSnapshot.getValue().toString();
-            int v = Integer.parseInt(firebaseID)+1;
+            int v = Integer.parseInt(firebaseID) + 1;
             firebaseID = String.valueOf(v);
             DatabaseReference databaseReference;
             FirebaseDatabase database;
@@ -95,6 +95,7 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
             SharedPreferences.Editor editor = sharedPref.edit();
             editor.putString("ID", firebaseID);
             editor.commit();
+            InitFireBase();
         }
 
         @Override
@@ -102,23 +103,24 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
 
         }
     };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewing);
 
-        init();
-        addClickListener();
+
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-        firebaseID = sharedPref.getString("ID","null");
-        if(firebaseID.equalsIgnoreCase("null"))
-        {
+        firebaseID = sharedPref.getString("ID", "null");
+        if (firebaseID.equalsIgnoreCase("null")) {
             DatabaseReference databaseReference;
             FirebaseDatabase database;
             database = FirebaseDatabase.getInstance();
             databaseReference = database.getReference("ID");
             databaseReference.addValueEventListener(valuevent);
         }
+        init();
+        addClickListener();
     }
 
     private void init() {
@@ -165,7 +167,12 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
         adapterVideoWait = new AdapterVideoViewingWait(VideoWaitsList, getLayoutInflater(), this);
         lv_player_wait.setAdapter(adapterVideoWait);
         bt_ID.setText("ID:" + firebaseID);
+        if (!firebaseID.equalsIgnoreCase("null")) {
+            InitFireBase();
+        }
+    }
 
+    private void InitFireBase() {
         fv = new FirebaseViewing(this, firebaseID);
         fv.setListen(this);
     }
@@ -275,10 +282,9 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
     public void AddVideo(VideoItem video) {
-        if(!firebaseID.equalsIgnoreCase("null")) {
+        if (!firebaseID.equalsIgnoreCase("null")) {
             fv.addVideo(video);
-        }
-        else{
+        } else {
             OnAddVideoFromServer(video);
         }
     }
@@ -319,11 +325,9 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
     public void DeleteVideo(int position) {
-        if(!firebaseID.equalsIgnoreCase("null")) {
+        if (!firebaseID.equalsIgnoreCase("null")) {
             fv.removeVideo(VideoWaitsList.get(position));
-        }
-        else
-        {
+        } else {
             OnRemoveVideoFromServer(VideoWaitsList.get(position));
         }
     }
@@ -394,17 +398,26 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
     @Override
-    public void ReceiverCommandNextFromServer() {
+    public void OnNextFromServer() {
         NextVideo();
     }
 
     @Override
     public void OnAddVideoFromServer(VideoItem video) {
-        VideoWaitsList.add(video);
-        if (_state == Constants.STATE.ON_WAIT_ADD_VIDEO) {
-            PlayVideo(0);
-        } else
-            adapterVideoWait.notifyDataSetChanged();
+        boolean isExist = false;
+        for (int i = 0; i < VideoWaitsList.size(); i++) {
+            if (VideoWaitsList.get(i).getLinkvideo().compareTo(video.getLinkvideo()) == 0) {
+                isExist = true;
+                break;
+            }
+        }
+        if (!isExist) {
+            VideoWaitsList.add(video);
+            if (_state == Constants.STATE.ON_WAIT_ADD_VIDEO) {
+                PlayVideo(0);
+            } else
+                adapterVideoWait.notifyDataSetChanged();
+        }
     }
 
     @Override
@@ -419,7 +432,7 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
     }
 
     @Override
-    public void ReceiverCommandPrioFromServer(String videoID) {
+    public void OnPrioFromServer(String videoID) {
         for (int i = 0; i < VideoWaitsList.size(); i++) {
             if (VideoWaitsList.get(i).getLinkvideo().compareTo(videoID) == 0) {
                 MoveVideoToFirst(i);
@@ -427,6 +440,7 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
             }
         }
     }
+
     @Override
     public void OnClientRequestFromServer(final String clientName) {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
@@ -447,11 +461,9 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     @Override
     public void priofromAdapter(int position) {
-        if(!firebaseID.equalsIgnoreCase("null")) {
+        if (!firebaseID.equalsIgnoreCase("null")) {
             fv.PrioVideo(VideoWaitsList.get(position).getLinkvideo());
-        }
-        else
-        {
+        } else {
             MoveVideoToFirst(position);
         }
 
@@ -576,7 +588,7 @@ public class ViewingActivity extends YouTubeBaseActivity implements YouTubePlaye
 
     @Override
     public void onDestroy() {
-        if(fv!=null) {
+        if (fv != null) {
             fv.FireBaseUninit();
             fv = null;
         }
