@@ -7,8 +7,8 @@ android {
         applicationId "com.totato.karaoke.me"
         minSdkVersion 17
         targetSdkVersion 23
-        versionCode 7
-        versionName "1.6"
+        versionCode 8
+        versionName "1.7"
         multiDexEnabled true
         dexOptions {
             javaMaxHeapSize "2048M"

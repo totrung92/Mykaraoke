@@ -134,7 +134,8 @@ public class FireBaseBase {
     }
     public void addVideo(VideoItem video) {
         Map<String, Object> child = new HashMap<String, Object>();
-        child.put(video.getLinkvideo(), video.getName());
+        String name = video.getName().replaceAll("[^A-Za-z0-9]"," ");
+        child.put(video.getLinkvideo(),name );
         databaseReference = database.getReference(RootList);
         databaseReference.updateChildren(child);
     }
